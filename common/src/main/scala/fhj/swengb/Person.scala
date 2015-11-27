@@ -1,8 +1,47 @@
 package fhj.swengb
 
 import java.net.URL
+import java.sql.{Connection, ResultSet, Statement}
 
-import fhj.swengb.GitHub.User
+import fhj.swengb.Db.DbEntity
+
+import scala.collection.mutable.ListBuffer
+
+
+object Person extends DbEntity[Person] {
+
+  val dropTableSql = "drop table if exists person"
+  val createTableSql = "create table person (githubUsername string, firstName string, secondName String, groupId integer)"
+  val insertSql = "insert into person (githubUsername, firstName, secondName, groupId) VALUES (?, ?, ?, ?)"
+
+
+  def reTable(stmt: Statement): Int = {
+    stmt.executeUpdate(Person.dropTableSql)
+    stmt.executeUpdate(Person.createTableSql)
+  }
+
+  def toDb(c: Connection)(p: Person): Int = {
+    val pstmt = c.prepareStatement(insertSql)
+    pstmt.setString(1, p.githubUsername)
+    pstmt.setString(2, p.firstName)
+    pstmt.setString(3, p.secondName)
+    pstmt.setInt(4, p.groupId)
+    pstmt.executeUpdate()
+  }
+
+  def fromDb(rs: ResultSet): List[Person] = {
+    val lb: ListBuffer[Person] = new ListBuffer[Person]()
+    while (rs.next()) lb.append(Student(rs.getString("firstName"),
+      rs.getString("secondName"),
+      rs.getString("githubUsername"),
+      rs.getInt("groupId")))
+    lb.toList
+  }
+
+  def queryAll(con: Connection): ResultSet =
+    query(con)("select * from person")
+
+}
 
 /**
   * Created by lad on 24.09.15.
@@ -14,6 +53,8 @@ sealed trait Person {
   def firstName: String
 
   def secondName: String
+
+  def groupId: Int
 
   def longName = s"$firstName $secondName"
 
@@ -66,4 +107,4 @@ case class Speaker(firstName: String,
 case class Student(firstName: String,
                    secondName: String,
                    githubUsername: String,
-                   group: Int) extends Person
+                   groupId: Int) extends Person

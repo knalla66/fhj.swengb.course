@@ -21,7 +21,7 @@ class PersonTest {
   def checkStudentsForGithubAccount(groupId: Int): Unit = {
     val studentsWithUnkownGithub =
       Students.students.filter(_.githubUsername == "XXXXX")
-    val groupedStudents: Map[Int, Seq[Student]] = studentsWithUnkownGithub.toSeq.sortWith((a, b) => a.secondName.compareTo(b.secondName) < 0).groupBy(s => s.group)
+    val groupedStudents: Map[Int, Seq[Student]] = studentsWithUnkownGithub.toSeq.sortWith((a, b) => a.secondName.compareTo(b.secondName) < 0).groupBy(s => s.groupId)
     val someStudents = groupedStudents.get(groupId)
     if (someStudents.isDefined) {
       val students = someStudents.get

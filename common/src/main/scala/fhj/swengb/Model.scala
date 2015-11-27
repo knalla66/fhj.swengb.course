@@ -128,7 +128,7 @@ object Students {
 
 
   def toScala(s: Student): String = {
-    s""" val ${s.userId}: Student = Student("${s.firstName}", "${s.secondName}", "${s.githubUsername}", ${s.group})
+    s""" val ${s.userId}: Student = Student("${s.firstName}", "${s.secondName}", "${s.githubUsername}", ${s.groupId})
         |
      """.stripMargin
   }
@@ -142,9 +142,9 @@ object Students {
   val students: Set[Student] = mkStudents()
 
   lazy val sortedStudents = mkStudents().toSeq.sortWith(compareBySecondname)
-  lazy val studentGroup1 = students.filter(_.group == 1)
-  lazy val studentGroup2 = students.filter(_.group == 2)
-  lazy val studentGroup3 = students.filter(_.group == 3)
+  lazy val studentGroup1 = students.filter(_.groupId == 1)
+  lazy val studentGroup2 = students.filter(_.groupId == 2)
+  lazy val studentGroup3 = students.filter(_.groupId == 3)
 
   def main(args: Array[String]) {
     val source: String = generateSource()
