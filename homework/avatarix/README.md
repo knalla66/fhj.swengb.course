@@ -14,7 +14,7 @@ GUI-Design:         Amar Bajric, Verena Skerbinz, Christian Lagger
 Parser & List:      Stefan Leitner, Daniel Kandlhofer, Georg Meizenitsch
 Tests:              Steven Hysi, Wolfgang Steinkellner, Granit Hoxha
 Documentation:      Markus Knaller
-Presentation:       Präsentation
+Presentation:       Amar Bajric
 
 *** Change Notes ***
 1)  Julia Johansson and Elke Keck got removed from the group "GUI-Design"
