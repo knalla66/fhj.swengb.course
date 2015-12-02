@@ -33,13 +33,9 @@ class FunctionalGitHubRepoExistsTest {
 
   @Test def shysi(): Unit = assert(Assessment("functional", Students.shysi).gitHubRepoExists)
 
-  @Test def jjohansson(): Unit = assert(Assessment("functional", Students.jjohansson).gitHubRepoExists)
-
   @Test def dkandlhofer(): Unit = assert(Assessment("functional", Students.dkandlhofer).gitHubRepoExists)
 
   @Test def ekarimova(): Unit = assert(Assessment("functional", Students.ekarimova).gitHubRepoExists)
-
-  @Test def ekeck(): Unit = assert(Assessment("functional", Students.ekeck).gitHubRepoExists)
 
   @Test def mknaller(): Unit = assert(Assessment("functional", Students.mknaller).gitHubRepoExists)
 
@@ -57,11 +53,7 @@ class FunctionalGitHubRepoExistsTest {
 
   @Test def tortmann(): Unit = assert(Assessment("functional", Students.tortmann).gitHubRepoExists)
 
-  @Test def rrobatsch(): Unit = assert(Assessment("functional", Students.rrobatsch).gitHubRepoExists)
-
   @Test def aschneider(): Unit = assert(Assessment("functional", Students.aschneider).gitHubRepoExists)
-
-  @Test def fschopper(): Unit = assert(Assessment("functional", Students.fschopper).gitHubRepoExists)
 
   @Test def aseebacher(): Unit = assert(Assessment("functional", Students.aseebacher).gitHubRepoExists)
 

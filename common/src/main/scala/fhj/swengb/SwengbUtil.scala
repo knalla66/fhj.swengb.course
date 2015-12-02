@@ -8,7 +8,7 @@ import java.nio.file.{Paths, Files}
 import scala.io.Source
 
 /**
-  * Created by lad on 26.10.15.
+  * Useful tooling for basic operations
   */
 object SwengbUtil {
 
@@ -22,7 +22,6 @@ object SwengbUtil {
   }
 
   def fetch(url: URL): String = {
-    println(url)
     Source.fromURL(url).mkString
   }
 }

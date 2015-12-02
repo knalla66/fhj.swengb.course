@@ -31,13 +31,9 @@ class TutorialTestExists {
 
   @Test def shysi(): Unit = assert(Assessment("tutorial", Students.shysi).testExists)
 
-  @Test def jjohansson(): Unit = assert(Assessment("tutorial", Students.jjohansson).testExists)
-
   @Test def dkandlhofer(): Unit = assert(Assessment("tutorial", Students.dkandlhofer).testExists)
 
   @Test def ekarimova(): Unit = assert(Assessment("tutorial", Students.ekarimova).testExists)
-
-  @Test def ekeck(): Unit = assert(Assessment("tutorial", Students.ekeck).testExists)
 
   @Test def mknaller(): Unit = assert(Assessment("tutorial", Students.mknaller).testExists)
 
@@ -55,11 +51,7 @@ class TutorialTestExists {
 
   @Test def tortmann(): Unit = assert(Assessment("tutorial", Students.tortmann).testExists)
 
-  @Test def rrobatsch(): Unit = assert(Assessment("tutorial", Students.rrobatsch).testExists)
-
   @Test def aschneider(): Unit = assert(Assessment("tutorial", Students.aschneider).testExists)
-
-  @Test def fschopper(): Unit = assert(Assessment("tutorial", Students.fschopper).testExists)
 
   @Test def aseebacher(): Unit = assert(Assessment("tutorial", Students.aseebacher).testExists)
 

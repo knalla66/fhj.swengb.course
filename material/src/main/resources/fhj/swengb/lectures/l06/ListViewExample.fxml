@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fhj.swengb.lectures.l06.ListViewExampleController">
+    <top>
+        <Label text="ListView Example" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="29.0" />
+            </font>
+        </Label>
+    </top>
+    <center>
+
+    </center>
+   <center>
+      <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <VBox prefHeight="365.0" prefWidth="232.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="29.0" prefWidth="232.0" text="File size" />
+            <Label fx:id="fileSizeLabel" text="-empty-">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>

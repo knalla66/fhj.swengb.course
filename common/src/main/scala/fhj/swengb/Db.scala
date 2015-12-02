@@ -82,7 +82,6 @@ object Db {
 }
 
 object DbTest {
-
   def main(args: Array[String]) {
     for {con <- Db.maybeConnection
          _ = Person.reTable(con.createStatement())
@@ -91,5 +90,15 @@ object DbTest {
       println(s)
     }
   }
-
+  /*
+  // old Person and Students
+  def main(args: Array[String]) {
+    for {con <- Db.maybeConnection
+         _ = Person.reTable(con.createStatement())
+         _ = Students.sortedStudents.map(toDb(con)(_))
+         s <- Person.fromDb(queryAll(con))} {
+      println(s)
+    }
+  }
+  */
 }

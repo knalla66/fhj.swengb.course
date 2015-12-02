@@ -32,13 +32,9 @@ class FunctionalTestExists {
 
   @Test def shysi(): Unit = assert(Assessment("functional", Students.shysi).testExists)
 
-  @Test def jjohansson(): Unit = assert(Assessment("functional", Students.jjohansson).testExists)
-
   @Test def dkandlhofer(): Unit = assert(Assessment("functional", Students.dkandlhofer).testExists)
 
   @Test def ekarimova(): Unit = assert(Assessment("functional", Students.ekarimova).testExists)
-
-  @Test def ekeck(): Unit = assert(Assessment("functional", Students.ekeck).testExists)
 
   @Test def mknaller(): Unit = assert(Assessment("functional", Students.mknaller).testExists)
 
@@ -56,11 +52,7 @@ class FunctionalTestExists {
 
   @Test def tortmann(): Unit = assert(Assessment("functional", Students.tortmann).testExists)
 
-  @Test def rrobatsch(): Unit = assert(Assessment("functional", Students.rrobatsch).testExists)
-
   @Test def aschneider(): Unit = assert(Assessment("functional", Students.aschneider).testExists)
-
-  @Test def fschopper(): Unit = assert(Assessment("functional", Students.fschopper).testExists)
 
   @Test def aseebacher(): Unit = assert(Assessment("functional", Students.aseebacher).testExists)
 

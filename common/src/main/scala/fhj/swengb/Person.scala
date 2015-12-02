@@ -31,10 +31,7 @@ object Person extends DbEntity[Person] {
 
   def fromDb(rs: ResultSet): List[Person] = {
     val lb: ListBuffer[Person] = new ListBuffer[Person]()
-    while (rs.next()) lb.append(Student(rs.getString("firstName"),
-      rs.getString("secondName"),
-      rs.getString("githubUsername"),
-      rs.getInt("groupId")))
+    while (rs.next()) lb.append(Student(rs.getString("firstName"), rs.getString("secondName"), rs.getString("githubUsername"), rs.getInt("groupId")))
     lb.toList
   }
 

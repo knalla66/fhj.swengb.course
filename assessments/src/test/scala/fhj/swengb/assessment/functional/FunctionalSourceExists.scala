@@ -32,13 +32,9 @@ class FunctionalSourceExists {
 
   @Test def shysi(): Unit = assert(Assessment("functional", Students.shysi).srcExists)
 
-  @Test def jjohansson(): Unit = assert(Assessment("functional", Students.jjohansson).srcExists)
-
   @Test def dkandlhofer(): Unit = assert(Assessment("functional", Students.dkandlhofer).srcExists)
 
   @Test def ekarimova(): Unit = assert(Assessment("functional", Students.ekarimova).srcExists)
-
-  @Test def ekeck(): Unit = assert(Assessment("functional", Students.ekeck).srcExists)
 
   @Test def mknaller(): Unit = assert(Assessment("functional", Students.mknaller).srcExists)
 
@@ -56,11 +52,7 @@ class FunctionalSourceExists {
 
   @Test def tortmann(): Unit = assert(Assessment("functional", Students.tortmann).srcExists)
 
-  @Test def rrobatsch(): Unit = assert(Assessment("functional", Students.rrobatsch).srcExists)
-
   @Test def aschneider(): Unit = assert(Assessment("functional", Students.aschneider).srcExists)
-
-  @Test def fschopper(): Unit = assert(Assessment("functional", Students.fschopper).srcExists)
 
   @Test def aseebacher(): Unit = assert(Assessment("functional", Students.aseebacher).srcExists)
 

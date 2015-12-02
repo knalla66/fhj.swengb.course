@@ -33,13 +33,9 @@ class TutorialGitHubRepoExistsTest {
 
   @Test def shysi(): Unit = assert(Assessment("tutorial", Students.shysi).gitHubRepoExists)
 
-  @Test def jjohansson(): Unit = assert(Assessment("tutorial", Students.jjohansson).gitHubRepoExists)
-
   @Test def dkandlhofer(): Unit = assert(Assessment("tutorial", Students.dkandlhofer).gitHubRepoExists)
 
   @Test def ekarimova(): Unit = assert(Assessment("tutorial", Students.ekarimova).gitHubRepoExists)
-
-  @Test def ekeck(): Unit = assert(Assessment("tutorial", Students.ekeck).gitHubRepoExists)
 
   @Test def mknaller(): Unit = assert(Assessment("tutorial", Students.mknaller).gitHubRepoExists)
 
@@ -57,13 +53,9 @@ class TutorialGitHubRepoExistsTest {
 
   @Test def tortmann(): Unit = assert(Assessment("tutorial", Students.tortmann).gitHubRepoExists)
 
-  @Test def rrobatsch(): Unit = assert(Assessment("tutorial", Students.rrobatsch).gitHubRepoExists)
-
   @Test def aschneider(): Unit = assert(Assessment("tutorial", Students.aschneider).gitHubRepoExists)
 
-  @Test def fschopper(): Unit = assert(Assessment("tutorial", Students.fschopper).gitHubRepoExists)
-
-  @Test def aseebacher() = assert(Assessment("tutorial", Students.aseebacher).gitHubRepoExists)
+  @Test def aseebacher(): Unit = assert(Assessment("tutorial", Students.aseebacher).gitHubRepoExists)
 
   @Test def vskerbinz(): Unit = assert(Assessment("tutorial", Students.vskerbinz).gitHubRepoExists)
 
